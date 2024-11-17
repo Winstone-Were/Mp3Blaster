@@ -43,3 +43,8 @@ void MainWindow::on_loadButton_clicked() {
 void MainWindow::on_volumeSlider_valueChanged(int value) {
     player->setVolume(value);
 }
+
+void MainWindow::on_rateSlider_valueChanged(int value){
+    double rate = value / 100.0;
+    player->setPlaybackRate(rate);
+}

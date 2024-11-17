@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
@@ -29,6 +30,8 @@ public:
     QPushButton *pauseButton;
     QPushButton *stopButton;
     QSlider *volumeSlider;
+    QLabel *label;
+    QSlider *rateSlider;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -61,9 +64,20 @@ public:
 
         volumeSlider = new QSlider(centralwidget);
         volumeSlider->setObjectName(QString::fromUtf8("volumeSlider"));
-        volumeSlider->setOrientation(Qt::Horizontal);
+        volumeSlider->setOrientation(Qt::Orientation::Horizontal);
 
         verticalLayout->addWidget(volumeSlider);
+
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        verticalLayout->addWidget(label);
+
+        rateSlider = new QSlider(centralwidget);
+        rateSlider->setObjectName(QString::fromUtf8("rateSlider"));
+        rateSlider->setOrientation(Qt::Orientation::Horizontal);
+
+        verticalLayout->addWidget(rateSlider);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -78,6 +92,7 @@ public:
         playButton->setText(QCoreApplication::translate("MainWindow", "Play", nullptr));
         pauseButton->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
         stopButton->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Rate", nullptr));
         (void)MainWindow;
     } // retranslateUi
 

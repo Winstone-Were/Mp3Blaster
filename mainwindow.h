@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
+#include <qglobal.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -25,6 +26,7 @@ private slots:
     void on_stopButton_clicked();
     void on_loadButton_clicked();
     void on_volumeSlider_valueChanged(int value);
+    void on_rateSlider_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;

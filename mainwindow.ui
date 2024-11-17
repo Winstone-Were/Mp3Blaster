@@ -43,7 +43,21 @@
     <item>
      <widget class="QSlider" name="volumeSlider">
       <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Rate</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="rateSlider">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
       </property>
      </widget>
     </item>

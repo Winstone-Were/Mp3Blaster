@@ -15,19 +15,19 @@
 
 ### The project is based on Qmake
 
-    First Create a build folder
+First Create a build folder
 
 ```bash
     mkdir build
 ```
-    cd into the build folder run qmake .. then make
+cd into the build folder run qmake .. then make
 
 ```bash
     cd build && qmake ...
     make
 ```
 
-    run the executable generated in /build
+run the executable generated in /build
 
 ```bash
     ./Mp3Blaster

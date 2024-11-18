@@ -34,6 +34,8 @@ void MainWindow::on_stopButton_clicked() {
 void MainWindow::on_loadButton_clicked() {
     QString fileName = QFileDialog::getOpenFileName(this, "Open MP3 File", QString(), "Audio Files (*.mp3)");
     if(! fileName.isEmpty()){
+        QFileInfo File(fileName);
+        ui->track_name->setText(File.fileName());
         playlist->clear();
         playlist->addMedia(QUrl::fromLocalFile(fileName));
         playlist->setCurrentIndex(0);
